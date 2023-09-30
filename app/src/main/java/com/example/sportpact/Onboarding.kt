@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.AdapterDataObserver
+import androidx.recyclerview.widget.RecyclerView.OnScrollListener
 import com.example.sportpact.databinding.ActivityOnboardingBinding
 
 class Onboarding : AppCompatActivity() {
@@ -24,5 +25,11 @@ class Onboarding : AppCompatActivity() {
         val helper = LinearSnapHelper()
         helper.attachToRecyclerView(recyclerView)
         recyclerView.adapter = adapter
+        recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+                println(dx)
+            }
+        })
     }
 }
