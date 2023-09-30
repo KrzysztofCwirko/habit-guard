@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 class OnboardingRecyclerView internal constructor(
         context: Context?,
     ) :
-        RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+        RecyclerView.Adapter<RecyclerView.ViewHolder>(), View.  {
         private val activity_onboarding = 1
         private val activity_onboarding_2 = 2
 
@@ -49,6 +49,7 @@ class OnboardingRecyclerView internal constructor(
                 activity_onboarding -> {
                     val view = LayoutInflater.from(parent.context).inflate((R.layout.fragment_onboarding), parent, false)
                     ViewHolderOne(view)
+
                 }
                 activity_onboarding_2 -> {
                     val view = LayoutInflater.from(parent.context).inflate(R.layout.fragment_onboarding_2, parent, false)
@@ -57,4 +58,8 @@ class OnboardingRecyclerView internal constructor(
                 else -> throw IllegalArgumentException("Invalid view type")
             }
         }
+
+    override fun onClick(p0: View?) {
+        TODO("Not yet implemented")
+    }
 }
