@@ -40,10 +40,10 @@ class StepsService : Service() {
         }
     }
 
-    override fun stopService(name: Intent?): Boolean {
+    override fun onDestroy() {
         timeTick?.cancel()
         job?.cancel()
-        return super.stopService(name)
+        super.onDestroy()
     }
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {

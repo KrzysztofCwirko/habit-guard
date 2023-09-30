@@ -26,15 +26,22 @@ class ActivityValidation : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        val preferences = getPrefs(this)
+
+        with (preferences.edit()) {
+            putBoolean(ACTIVITY_DONE_OUTSIDE, false)
+            apply()
+        }
+
 
         val sharedPref = getPrefs(this)
         val time = sharedPref.getString(ACTIVITY_TIME, "0.0")?.toDouble() ?: 0.0
         val targetTime = sharedPref.getString(ACTIVITY_TARGET_TIME, ACTIVITY_DEFAULT_TIME.toString())?.toDouble() ?: ACTIVITY_DEFAULT_TIME
-
-        with (sharedPref.edit()) {
-            putString(ACTIVITY_TIME, (0.0).toString())
-            apply()
-        }
+//
+//        with (sharedPref.edit()) {
+//            putString(ACTIVITY_TIME, (0.0).toString())
+//            apply()
+//        }
 
         val doneOutside = sharedPref.getBoolean(ACTIVITY_DONE_OUTSIDE, false)
         if(doneOutside) {
@@ -84,7 +91,7 @@ class ActivityValidation : AppCompatActivity() {
 
     private fun checkIfIsCompatible() : Boolean {
         val sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
-        return sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) == null
+        return sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) != null
     }
 
     private fun startService() {
