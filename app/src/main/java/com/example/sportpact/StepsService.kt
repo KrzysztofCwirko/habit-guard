@@ -40,6 +40,12 @@ class StepsService : Service() {
         }
     }
 
+    override fun stopService(name: Intent?): Boolean {
+        timeTick?.cancel()
+        job?.cancel()
+        return super.stopService(name)
+    }
+
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
         createNotificationChannel()
         startForeground(NotId, getMyNotification("We are checking on you ;)"))
