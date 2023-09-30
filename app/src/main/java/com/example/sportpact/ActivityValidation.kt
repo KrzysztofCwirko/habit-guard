@@ -22,6 +22,10 @@ class ActivityValidation : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityValidationBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+
 
         val sharedPref = getPrefs(this)
         val time = sharedPref.getString(ACTIVITY_TIME, "0.0")?.toDouble() ?: 0.0
