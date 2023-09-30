@@ -6,23 +6,25 @@ import android.view.View
 import android.view.ViewGroup
 import res.layout.*
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
 
 
 class OnboardingRecyclerView internal constructor(
         context: Context?,
     ) :
-        RecyclerView.Adapter<RecyclerView.ViewHolder>(), View.  {
+        RecyclerView.Adapter<RecyclerView.ViewHolder>(){
         private val activity_onboarding = 1
         private val activity_onboarding_2 = 2
 
 
-        override fun getItemViewType(position: Int): Int {
-            return if (position % 2 == 0) {
-                activity_onboarding
-            } else {
+    override fun getItemViewType(position: Int): Int {
+        return if (position % 2 == 0) {
+            activity_onboarding
+        } else {
                 activity_onboarding_2
-            }
         }
+    }
 
     override fun getItemCount(): Int {
         return 2
@@ -58,8 +60,4 @@ class OnboardingRecyclerView internal constructor(
                 else -> throw IllegalArgumentException("Invalid view type")
             }
         }
-
-    override fun onClick(p0: View?) {
-        TODO("Not yet implemented")
-    }
 }
