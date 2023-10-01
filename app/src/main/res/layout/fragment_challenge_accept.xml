@@ -151,14 +151,17 @@
             />
     </FrameLayout>
 
-    <Button
+    <TextView
         android:id="@+id/start_ch"
         android:layout_marginTop="25dp"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
         android:text="Confirm challenge"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:background="@drawable/light_round"
         android:textSize="20sp"/>

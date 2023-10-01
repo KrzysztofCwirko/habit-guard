@@ -28,7 +28,7 @@ class FragmentStartChallenge : Fragment() {
             }
         }
 
-        view.findViewById<Button>(R.id.start_ch).setOnClickListener {
+        view.findViewById<TextView>(R.id.start_ch).setOnClickListener {
             val intent = Intent(requireContext(), MainActivity::class.java)
             startActivity(intent)
             requireActivity().overridePendingTransition(R.anim.fade_in, R.anim.fade_out)

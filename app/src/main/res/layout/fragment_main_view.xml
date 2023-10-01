@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take an action!"
+        android:textSize="45sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/light_round"
+        android:backgroundTint="#80E6E8EC"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start your workout!"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="13dp"/>
+
+        <TextView
+            android:id="@+id/ac_repay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="@color/black"
+            android:alpha=".5"
+            android:layout_marginBottom="15dp"
+             android:layout_marginStart="20dp"
+            android:text="Doing workout today is going\nto save you 15.6 PLN"/>
+
+        <ImageView
+            android:id="@+id/ac_start"
+            android:layout_gravity="end|center_vertical"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_play_button"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/light_round"
+        android:backgroundTint="#80E6E8EC"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Balance"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="13dp"/>
+
+        <TextView
+            android:id="@+id/ac_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="@color/black"
+            android:alpha=".5"
+            android:layout_marginBottom="40dp"
+            android:layout_marginStart="20dp"
+            android:text="25 PLN reclaimed, 150 PLN left, 15 PLN lost."/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/uber_light_round"
+            android:backgroundTint="@color/white">
+
+            <View
+                android:id="@+id/ac_pos_fill"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@drawable/uber_2_round"
+                android:backgroundTint="@color/main_color"/>
+
+            <View
+                android:id="@+id/ac_neg_fill"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@drawable/uber_2_round"
+                android:backgroundTint="@color/pink"
+                android:layout_gravity="end" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/light_round"
+        android:backgroundTint="#80E6E8EC"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Challenge"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="13dp"/>
+
+        <TextView
+            android:id="@+id/ac_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="@color/black"
+            android:alpha=".5"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="20dp"
+            android:text="74% challenge completion.\n2 workouts left this week.\n14 workouts left in total."/>
+
+        <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+            android:id="@+id/ac_fill"
+            android:layout_gravity="end|center_vertical"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            app:progressBackgroundColor="@color/white"
+            app:progressColor="@color/main_color"
+            app:textColor="#80000000"
+            app:progressStrokeWidth="12dp"
+            app:progressBackgroundStrokeWidth="15dp"
+            app:progressCap="butt"/>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#80D6D3D3"/>
+
+    <TextView
+        android:lineSpacingExtra="6dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#9B9999"
+        android:text="Lifetime stats:\nChallenges completed: 4\nIn total you bet: 450 PLN\nDonated: 33.5 PLN\nReclaimed: 416.5 PLN"/>
+
+</LinearLayout>

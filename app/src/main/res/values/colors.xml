@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="dot_deselected">#D6D3D3</color>
     <color name="main_color">#35E166</color>
+    <color name="pink">#EE558B</color>
 </resources>
