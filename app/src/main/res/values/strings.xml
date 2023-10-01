@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">SportPact</string>
+    <string name="price_pact_learn_more_description">
+     <b>Price-Pact: Leveraging Loss Aversion for Motivation</b> \n \n
+        Price-pact is a motivational technique that capitalizes on an individual\'s inherent fear of loss to drive commitment to a specific goal. The concept is simple yet powerful: individuals pledge a specified amount of money, which they can only reclaim upon successfully achieving their set objective. If they fail, the money is forfeited. \n \n
+        <b>How Price-Pact Works:</b> \n
+          <b>1.</b> Commitment: An individual sets a clear, measurable goal, such as losing a certain amount of weight, completing a project, or quitting smoking. \n
+          <b>2.</b> Pledge: The individual then commits a specified sum of money as a guarantee towards achieving this goal. \n
+          <b>3.</b> Verification: Our system is design to verify user’s workouts and allow funds reclamation only if the condition was met. \n
+          <b>4.</b> Outcome: If the goal is achieved within the set timeframe, the individual reclaims their money. If not, the money go to the selected charity. \n \n
+
+        <b>The Power of Loss Aversion:</b> \n
+        The effectiveness of the price-pact technique lies in its exploitation of loss aversion, a concept popularized by psychologist Daniel Kahneman. Loss aversion posits that people feel the pain of losing something more intensely than the pleasure of gaining something of equal value. By putting their own money on the line, individuals are more motivated to achieve their goals to avoid the pain of financial loss. \n \n
+
+        <b>Conclusion:</b> \n
+        The price-pact method is a testament to the power of loss aversion in influencing behavior. By turning the fear of financial loss into a motivational tool, individuals can harness their innate psychological biases to drive positive change and achieve their goals. \n \n
+    </string>
 </resources>
