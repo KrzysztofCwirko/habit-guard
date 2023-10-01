@@ -5,8 +5,12 @@ import android.content.Intent
 import android.hardware.Sensor
 import android.hardware.SensorManager
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.RelativeSizeSpan
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator.ProgressTextAdapter
 import com.example.sportpact.databinding.ActivityValidationBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -25,17 +29,23 @@ class ActivityValidation : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val preferences = getPrefs(this)
-
-        with (preferences.edit()) {
-            putBoolean(ACTIVITY_DONE_OUTSIDE, false)
-            apply()
-        }
-
-
         val sharedPref = getPrefs(this)
         val time = sharedPref.getString(ACTIVITY_TIME, "0.0")?.toDouble() ?: 0.0
         val targetTime = sharedPref.getString(ACTIVITY_TARGET_TIME, ACTIVITY_DEFAULT_TIME.toString())?.toDouble() ?: ACTIVITY_DEFAULT_TIME
+
+        binding.progressBar.setProgressTextAdapter { currentProgress ->
+            val result = "${(targetTime - currentProgress).toInt()} min\n$targetTime min in total"
+            val sp = SpannableString(result)
+            val start = result.indexOf("min")
+            sp.setSpan(
+                RelativeSizeSpan(12f),
+                start,
+                result.length - start,
+                Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+            )
+            result
+        }
+
 //
 //        with (sharedPref.edit()) {
 //            putString(ACTIVITY_TIME, (0.0).toString())

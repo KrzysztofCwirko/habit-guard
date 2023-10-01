@@ -20,6 +20,8 @@ class ChallengeActivity : AppCompatActivity() {
         val dots = arrayListOf(binding.imageViewDot1, binding.imageViewDot2,
             binding.imageViewDot3, binding.imageViewDot4, binding.imageViewDot5)
 
+        binding.onboardingRV.offscreenPageLimit = 5
+
         binding.onboardingRV.adapter = ScreenSeekBarFragment(this, arrayListOf(
             Triple(12, 1, 1),    //max, min, step
             Triple(7, 1, 1),

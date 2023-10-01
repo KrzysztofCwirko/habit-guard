@@ -39,7 +39,13 @@ class SeekBarFragment : Fragment() {
 
         seek.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
-                val content = "$p1 ${name[1].replace("X", if(p1 == 1) { "" } else { "s" })}"
+                val content = "$p1 ${
+                    if(name[1].contains("X")){
+                        name[1].replace("X", if(p1 == 1) { "" } else { "s" })
+                    } else {
+                        name[1]
+                    }
+                }"
                 text.text = content
                 values[position] = p1
             }

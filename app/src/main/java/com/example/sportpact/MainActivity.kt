@@ -12,6 +12,13 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        val preferences = getPrefs(this)
+
+        with (preferences.edit()) {
+            putBoolean(ACTIVITY_DONE_OUTSIDE, false)
+            apply()
+        }
+
         binding.onboardingRV.adapter = MainMenuAdapter(this,
             arrayListOf(
                 FragmentMainView(),
