@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class ScreenSeekBarFragment(fa: FragmentActivity, private val seekBarSetting : ArrayList<Triple<Int,Int,Int>>, private val names : ArrayList<Pair<String, String>>) : FragmentStateAdapter(fa) {
-    override fun getItemCount(): Int = seekBarSetting.size
+    override fun getItemCount(): Int = seekBarSetting.size + 1
     override fun createFragment(position: Int): Fragment {
         if(position == itemCount-1) {
             return FragmentStartChallenge()

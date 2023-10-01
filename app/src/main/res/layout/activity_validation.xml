@@ -13,7 +13,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:progressBackgroundStrokeWidth="25dp"
+        app:progressStrokeWidth="25dp"
+        app:progressCap="butt"
+        app:progressColor="@color/main_color"
+        app:textColor="@color/black"
+        app:textSize="40sp"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

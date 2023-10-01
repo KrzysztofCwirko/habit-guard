@@ -21,9 +21,10 @@ class FragmentStartChallenge : Fragment() {
             view.findViewById(R.id.c_week),view.findViewById(R.id.c_week),view.findViewById<TextView>(R.id.c_week))
 
         SeekBarFragment.onRefresh = {
-            texts.forEachIndexed { index, textView ->
-                val new = textView.text.toString().replace("X", SeekBarFragment.values[index].toString())
-                    .replace("Y", if(SeekBarFragment.values[index] == 1) { "" } else {"s"})
+                texts.forEachIndexed { index, textView ->
+                val new = textView.text.toString()
+                if(new.contains("X")) new.replace("X", SeekBarFragment.values[index].toString())
+                if(new.contains("Y")) new.replace("Y", if(SeekBarFragment.values[index] == 1) { "" } else {"s"})
                 textView.text = new
             }
         }
