@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
     <ImageView
         android:layout_gravity="center"
         android:id="@+id/imageView"
@@ -14,9 +15,13 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_1" />
 
     <LinearLayout
@@ -33,6 +38,7 @@
             android:layout_marginStart="55dp"
             android:layout_marginEnd="55dp"
             android:layout_marginBottom="15dp"
+            android:layout_marginTop="25dp"
             android:gravity="center"
             android:text="Motivation is overrated."
             android:textSize="35sp"

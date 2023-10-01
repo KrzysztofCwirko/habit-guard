@@ -29,10 +29,12 @@ class FragmentStartChallenge : Fragment() {
                 texts.forEachIndexed { index, textView ->
                 var new = strings[index].toString()
                     new = new.replace("X", SeekBarFragment.values[index].toString())
-                    new = new.replace("Y", if(SeekBarFragment.values[index] == 1) { "" } else {"s"})
+                    new = new.replace("Q", if(SeekBarFragment.values[index] == 1) { "" } else {"s"})
                 textView.text = new
             }
         }
+
+        SeekBarFragment.onRefresh()
 
         view.findViewById<TextView>(R.id.start_ch).setOnClickListener {
             val preferences = getPrefs(requireActivity())

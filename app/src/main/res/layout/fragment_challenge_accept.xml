@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:textColor="@color/black"
-            android:text="Your challenge last for X weekY."
+            android:text="Your challenge last for X weekQ."
             android:textSize="18sp"/>
 
         <View
@@ -71,12 +71,14 @@
             />
         <TextView
             android:id="@+id/c_day"
+            android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:textColor="@color/black"
-            android:text="You will have to stay commited for X dayY a week."
+            android:text="You will have to stay commited for X dayQ a week."
             android:textSize="18sp"
+            android:layout_marginTop="2dp"
             android:layout_marginBottom="15dp"/>
 
         <View
@@ -107,9 +109,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:textColor="@color/black"
-            android:text="The minimum training time is X  minuteY."
+            android:text="The minimum training time is X  minuteQ."
             android:textSize="18sp"
-            android:layout_marginBottom="15dp"/>
+            android:layout_marginBottom="25dp"/>
 
         <View
             android:layout_gravity="center_vertical|bottom"
@@ -138,10 +140,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
+
             android:textColor="@color/black"
             android:text="You have committed X PLN. Every day of the challenge, you will have the opportunity to reclaim a proportional amount of your money."
             android:textSize="18sp"
-            android:layout_marginBottom="15dp"/>
+            android:layout_marginBottom="25dp"/>
 
         <View
             android:layout_gravity="center_vertical|bottom"
