@@ -24,6 +24,7 @@ class ActivityValidation : AppCompatActivity() {
     private var uiUpdate : Job? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        window.statusBarColor = resources.getColor(R.color.main_color)
         super.onCreate(savedInstanceState)
         binding = ActivityValidationBinding.inflate(layoutInflater)
         val view = binding.root
@@ -33,24 +34,21 @@ class ActivityValidation : AppCompatActivity() {
         val time = sharedPref.getString(ACTIVITY_TIME, "0.0")?.toDouble() ?: 0.0
         val targetTime = sharedPref.getString(ACTIVITY_TARGET_TIME, ACTIVITY_DEFAULT_TIME.toString())?.toDouble() ?: ACTIVITY_DEFAULT_TIME
 
-        binding.progressBar.setProgressTextAdapter { currentProgress ->
-            val result = "${(targetTime - currentProgress).toInt()} min\n$targetTime min in total"
-            val sp = SpannableString(result)
-            val start = result.indexOf("min")
-            sp.setSpan(
-                RelativeSizeSpan(12f),
-                start,
-                result.length - start,
-                Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
-            )
+        binding.progressBar.setProgressTextAdapter { cp ->
+            val currentProgress = cp
+            println(currentProgress)
+            val result =
+                if(currentProgress.toInt() < 60){"${currentProgress.toInt()} s"} else {"${(currentProgress/60).toInt()} min"}//\n$targetTime min in total"
+//            val sp = SpannableString(result)
+//            val start = result.indexOf("min")
+//            sp.setSpan(
+//                RelativeSizeSpan(12f),
+//                start,
+//                result.length - start,
+//                Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+//            )
             result
         }
-
-//
-//        with (sharedPref.edit()) {
-//            putString(ACTIVITY_TIME, (0.0).toString())
-//            apply()
-//        }
 
         val doneOutside = sharedPref.getBoolean(ACTIVITY_DONE_OUTSIDE, false)
         if(doneOutside) {

@@ -5,6 +5,7 @@ import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.viewpager2.widget.ViewPager2
 import com.example.sportpact.databinding.ActivityOnboardingBinding
 
@@ -13,6 +14,8 @@ class Onboarding : AppCompatActivity() {
     private lateinit var binding: ActivityOnboardingBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        window.statusBarColor = resources.getColor(R.color.main_color)
         super.onCreate(savedInstanceState)
         binding = ActivityOnboardingBinding.inflate(layoutInflater)
         val view = binding.root

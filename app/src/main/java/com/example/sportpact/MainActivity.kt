@@ -7,6 +7,7 @@ import com.example.sportpact.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+        window.statusBarColor = resources.getColor(R.color.main_color)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         with (preferences.edit()) {
             putBoolean(ACTIVITY_DONE_OUTSIDE, false)
+            putString(ACTIVITY_TIME, (0.0).toString())
             apply()
         }
 

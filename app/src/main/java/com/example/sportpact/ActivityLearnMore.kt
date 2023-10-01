@@ -8,6 +8,7 @@ class ActivityLearnMore : AppCompatActivity()  {
     private lateinit var binding: ActivityLearnMoreBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        window.statusBarColor = resources.getColor(R.color.main_color)
         super.onCreate(savedInstanceState)
         binding = ActivityLearnMoreBinding.inflate(layoutInflater)
         val view = binding.root

@@ -12,6 +12,7 @@ class ChallengeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityChallangeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        window.statusBarColor = resources.getColor(R.color.main_color)
         super.onCreate(savedInstanceState)
         binding = ActivityChallangeBinding.inflate(layoutInflater)
         val view = binding.root
