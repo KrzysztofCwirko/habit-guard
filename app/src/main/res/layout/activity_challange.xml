@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ChallengeActivity">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/onboardingRV"
@@ -12,14 +13,28 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Challenge creator"
+        android:textColor="@color/black"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:layout_marginBottom="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -36,15 +51,45 @@
             app:tint="@color/main_color" />
 
         <ImageView
+            android:layout_marginStart="15dp"
             android:id="@+id/imageViewDot2"
             android:layout_width="13dp"
             android:layout_height="13dp"
-            android:layout_marginStart="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/img_4"
-            app:tint="#D5D5D5" />
+            app:tint="@color/dot_deselected" />
+        <ImageView
+            android:layout_marginStart="15dp"
+            android:id="@+id/imageViewDot3"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/img_4"
+            app:tint="@color/dot_deselected" />
+        <ImageView
+            android:layout_marginStart="15dp"
+            android:id="@+id/imageViewDot4"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/img_4"
+            app:tint="@color/dot_deselected" />
+        <ImageView
+            android:layout_marginStart="15dp"
+            android:id="@+id/imageViewDot5"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/img_4"
+            app:tint="@color/dot_deselected" />
     </LinearLayout>
 
     <ImageView
