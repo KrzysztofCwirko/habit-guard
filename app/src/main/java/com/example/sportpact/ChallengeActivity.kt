@@ -4,11 +4,21 @@ import android.content.Intent
 import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View
+import android.view.View.OnTouchListener
 import androidx.viewpager2.widget.ViewPager2
 import com.example.sportpact.databinding.ActivityChallangeBinding
 
 class ChallengeActivity : AppCompatActivity() {
+    companion object {
+        var blockVp : IBlockViewPager = object : IBlockViewPager {
+            override fun block(state : Boolean) {
+
+            }
+        }
+    }
+
     private lateinit var binding: ActivityChallangeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +32,12 @@ class ChallengeActivity : AppCompatActivity() {
             binding.imageViewDot3, binding.imageViewDot4, binding.imageViewDot5)
 
         binding.onboardingRV.offscreenPageLimit = 5
+
+        blockVp = object : IBlockViewPager {
+            override fun block(state : Boolean) {
+                binding.onboardingRV.isUserInputEnabled = !state
+            }
+        }
 
         binding.onboardingRV.adapter = ScreenSeekBarFragment(this, arrayListOf(
             Triple(12, 1, 1),    //max, min, step
@@ -74,4 +90,8 @@ class ChallengeActivity : AppCompatActivity() {
             }
         }
     }
+}
+
+interface IBlockViewPager {
+    fun block(state : Boolean)
 }
