@@ -168,6 +168,11 @@
         android:textColor="@color/black"
         android:background="@drawable/light_round"
         android:textSize="20sp"/>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/google_pay_img"/>
 </LinearLayout>
     </ScrollView>
 

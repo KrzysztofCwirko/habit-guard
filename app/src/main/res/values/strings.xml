@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SportPact</string>
+    <string name="app_name">Habit Guard</string>
     <string name="price_pact_learn_more_description">
      <b>Price-Pact: Leveraging Loss Aversion for Motivation</b> \n \n
         Price-pact is a motivational technique that capitalizes on an individual\'s inherent fear of loss to drive commitment to a specific goal. The concept is simple yet powerful: individuals pledge a specified amount of money, which they can only reclaim upon successfully achieving their set objective. If they fail, the money is forfeited. \n \n

@@ -27,19 +27,6 @@
 <!--        android:clickable="true"-->
 <!--        android:focusableInTouchMode="true"/>-->
 
-    <TextView
-        android:id="@+id/learn_more"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Challenge creator"
-        android:textColor="@color/black"
-        android:layout_marginTop="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
