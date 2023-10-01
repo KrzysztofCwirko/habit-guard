@@ -1,172 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_color">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="75dp">
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-    <TextView
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Rules of the challenge"
-        android:layout_marginTop="65dp"
-        android:textSize="48sp"
-        android:textAlignment="center"
-        android:textColor="@color/black" />
-
-    <FrameLayout
-        android:layout_marginTop="45dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="35dp">
-
-        <ImageView
-            android:layout_gravity="top"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_calendar_grid"
-            android:layout_marginBottom="15dp"/>
-        <TextView
-            android:id="@+id/c_week"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:textColor="@color/black"
-            android:text="Your challenge last for X weekY."
-            android:textSize="18sp"/>
+            android:layout_height="match_parent"
+            android:layout_marginBottom="45dp">
 
-        <View
-            android:layout_gravity="center_vertical|bottom"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/black"/>
-    </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Rules of the challenge"
+                    android:layout_marginTop="65dp"
+                    android:textSize="48sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
 
-    <FrameLayout
-        android:layout_marginTop="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="35dp">
+                <FrameLayout
+                    android:layout_marginTop="45dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp">
 
-        <ImageView
-            android:layout_gravity="top"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_calendar"
-            />
-        <TextView
-            android:id="@+id/c_day"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:textColor="@color/black"
-            android:text="You will have to stay commited for X dayY a week."
-            android:textSize="18sp"
-            android:layout_marginBottom="15dp"/>
+                    <ImageView
+                        android:layout_gravity="top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_calendar_grid"
+                        android:layout_marginBottom="15dp"/>
+                    <TextView
+                        android:id="@+id/c_week"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:textColor="@color/black"
+                        android:text="Your challenge last for X weekY."
+                        android:textSize="18sp"/>
 
-        <View
-            android:layout_gravity="center_vertical|bottom"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/black"
-            />
-    </FrameLayout>
+                    <View
+                        android:layout_gravity="center_vertical|bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/black"/>
+                </FrameLayout>
 
-    <FrameLayout
-        android:layout_marginTop="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="35dp">
+                <FrameLayout
+                    android:layout_marginTop="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp">
 
-        <ImageView
-            android:layout_gravity="top"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_alarm"
-            />
-        <TextView
-            android:id="@+id/c_time"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:textColor="@color/black"
-            android:text="The minimum training time is X  minuteY."
-            android:textSize="18sp"
-            android:layout_marginBottom="15dp"/>
+                    <ImageView
+                        android:layout_gravity="top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_calendar"
+                        />
+                    <TextView
+                        android:id="@+id/c_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:textColor="@color/black"
+                        android:text="You will have to stay commited for X dayY a week."
+                        android:textSize="18sp"
+                        android:layout_marginBottom="15dp"/>
 
-        <View
-            android:layout_gravity="center_vertical|bottom"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/black"
-            />
-    </FrameLayout>
+                    <View
+                        android:layout_gravity="center_vertical|bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/black"
+                        />
+                </FrameLayout>
 
-    <FrameLayout
-        android:layout_marginTop="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="35dp">
+                <FrameLayout
+                    android:layout_marginTop="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp">
 
-        <ImageView
-            android:layout_gravity="top"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_coins"
-            />
-        <TextView
-            android:id="@+id/c_coin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:textColor="@color/black"
-            android:text="You have committed X PLN. Every day of the challenge, you will have the opportunity to reclaim a proportional amount of your money."
-            android:textSize="18sp"
-            android:layout_marginBottom="15dp"/>
+                    <ImageView
+                        android:layout_gravity="top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_alarm"
+                        />
+                    <TextView
+                        android:id="@+id/c_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:textColor="@color/black"
+                        android:text="The minimum training time is X  minuteY."
+                        android:textSize="18sp"
+                        android:layout_marginBottom="15dp"/>
 
-        <View
-            android:layout_gravity="center_vertical|bottom"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/black"
-            />
-    </FrameLayout>
+                    <View
+                        android:layout_gravity="center_vertical|bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/black"
+                        />
+                </FrameLayout>
 
-    <TextView
-        android:id="@+id/start_ch"
-        android:layout_marginTop="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="35dp"
-        android:text="Confirm challenge"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:background="@drawable/light_round"
-        android:textSize="20sp"/>
-</LinearLayout>
-    </ScrollView>
+                <FrameLayout
+                    android:layout_marginTop="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp">
 
+                    <ImageView
+                        android:layout_gravity="top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_coins"
+                        />
+                    <TextView
+                        android:id="@+id/c_coin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:textColor="@color/black"
+                        android:text="You have committed X PLN. Every day of the challenge, you will have the opportunity to reclaim a proportional amount of your money."
+                        android:textSize="18sp"
+                        android:layout_marginBottom="15dp"/>
+
+                    <View
+                        android:layout_gravity="center_vertical|bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/black"
+                        />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/start_ch"
+                    android:layout_marginTop="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:text="Confirm and pay"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:background="@drawable/light_round"
+                    android:textSize="20sp"/>
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="20dp"
+                    android:maxWidth="30dp"
+                    android:maxHeight="30dp"
+                    app:srcCompat="@drawable/google_pay_img" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
 
 </FrameLayout>
