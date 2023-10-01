@@ -14,7 +14,6 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-
 class ActivityValidation : AppCompatActivity() {
     private lateinit var binding: ActivityValidationBinding
     private var timeTick : Job? = null
