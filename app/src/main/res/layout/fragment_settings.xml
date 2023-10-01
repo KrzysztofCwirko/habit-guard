@@ -26,6 +26,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/uber_light_round"
         android:backgroundTint="#80D6D3D3">
 
@@ -50,8 +51,144 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="#80D6D3D3"/>
+        android:layout_height="2dp"
+        android:background="#80D6D3D3"
+        android:layout_marginBottom="7dp"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:useDefaultMargins="true"
+        android:layout_marginBottom="10dp">
+
+        <FrameLayout
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/light_round"
+            android:backgroundTint="#80D6D3D3">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/ic_sie_pomaga"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Siepomaga"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal|bottom"/>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/light_round"
+            android:backgroundTint="#80D6D3D3">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/ic_pah"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Polska akcja humanitarna"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal|bottom"/>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/light_round"
+            android:backgroundTint="#80D6D3D3">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/ic_caritas"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Caritas Polska"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal|bottom"/>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/light_round"
+            android:backgroundTint="#80D6D3D3">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/ic_unicef"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Unicef"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal|bottom"/>
+
+        </FrameLayout>
+
+
+    </GridLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#B5B5B5"
+        android:text="Haven’t found your charity? Click &amp; fill in the form."/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#80D6D3D3"
+        android:layout_marginBottom="45dp"
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"

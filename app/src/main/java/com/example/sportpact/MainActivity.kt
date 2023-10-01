@@ -14,7 +14,12 @@ class MainActivity : AppCompatActivity() {
 
         binding.onboardingRV.adapter = MainMenuAdapter(this,
             arrayListOf(
-                FragmentMainView()
+                FragmentMainView(),
+                FragmentSettings()
             ))
+
+        binding.settings.setOnClickListener {
+            binding.onboardingRV.currentItem = 1
+        }
     }
 }
